@@ -1,43 +1,49 @@
+/* General body styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffebee;
-    color: #d32f2f;
+    background-color: #ffebee; /* Light pink background */
+    color: #d32f2f; /* Dark red text */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100vh; /* Full viewport height */
     margin: 0;
     overflow: hidden; /* Hide overflow to prevent scrolling */
     position: relative;
 }
 
+/* Container for the main content */
 .container {
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
     z-index: 1; /* Ensure the container is above the emojis */
     position: relative;
 }
 
+/* Heading styling */
 h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
+/* Paragraph styling */
 p {
     font-size: 1.2rem;
     margin: 10px 0;
 }
 
+/* Button container styling */
 .buttons {
     margin-top: 20px;
 }
 
+/* Button styling */
 button {
-    background-color: #d32f2f;
-    color: white;
+    background-color: #d32f2f; /* Dark red background */
+    color: white; /* White text */
     border: none;
     padding: 10px 20px;
     margin: 5px;
@@ -47,25 +53,35 @@ button {
     transition: background-color 0.3s;
 }
 
+/* Button hover effect */
 button:hover {
-    background-color: #b71c1c;
+    background-color: #b71c1c; /* Darker red on hover */
 }
 
+/* Response message styling */
 #response {
     font-size: 1.5rem;
     margin-top: 20px;
-    color: #388e3c;
+    color: #388e3c; /* Green text for the response */
+}
+
+/* Countdown timer styling */
+#countdown {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    color: #d32f2f;
 }
 
 /* Floating love emojis */
 .emoji {
     position: absolute;
     font-size: 2rem;
-    animation: float 10s infinite ease-in-out;
-    opacity: 0.7;
+    animation: float 10s infinite ease-in-out; /* Floating animation */
+    opacity: 0.7; /* Slightly transparent */
     z-index: 0; /* Ensure emojis are behind the container */
 }
 
+/* Floating animation keyframes */
 @keyframes float {
     0% {
         transform: translateY(0) translateX(0) rotate(0deg);
@@ -79,6 +95,15 @@ button:hover {
 }
 
 /* Heart click animation */
+.heart {
+    position: absolute;
+    font-size: 2rem;
+    color: #ff4d4d;
+    animation: heartClick 1s ease-out;
+    pointer-events: none; /* Ensure clicks pass through */
+}
+
+/* Heart click animation keyframes */
 @keyframes heartClick {
     0% {
         transform: scale(0);
@@ -88,12 +113,4 @@ button:hover {
         transform: scale(2);
         opacity: 0;
     }
-}
-
-.heart {
-    position: absolute;
-    font-size: 2rem;
-    color: #ff4d4d;
-    animation: heartClick 1s ease-out;
-    pointer-events: none; /* Ensure clicks pass through */
 }

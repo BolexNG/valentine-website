@@ -9,7 +9,7 @@ function respond(answer) {
     }
 }
 
-// Countdown timer
+// Countdown timer to Valentine's Day 2025
 const countdownElement = document.getElementById("countdown");
 
 function updateCountdown() {
@@ -22,7 +22,7 @@ function updateCountdown() {
     const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-    countdownElement.innerHTML = `Countdown to Valentine's Day: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+    countdownElement.innerHTML = `Countdown to Valentine's Day 2025: ${days}d ${hours}h ${minutes}m ${seconds}s`;
 }
 
 setInterval(updateCountdown, 1000); // Update every second
