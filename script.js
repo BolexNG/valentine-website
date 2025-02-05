@@ -17,6 +17,12 @@ function updateCountdown() {
     const now = new Date().getTime();
     const timeLeft = valentinesDay - now;
 
+    // Check if the countdown has already passed
+    if (timeLeft < 0) {
+        countdownElement.innerHTML = "Valentine's Day 2025 has already passed! 💖";
+        return;
+    }
+
     const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
     const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
