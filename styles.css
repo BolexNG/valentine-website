@@ -77,3 +77,23 @@ button:hover {
         transform: translateY(0) translateX(0) rotate(360deg);
     }
 }
+
+/* Heart click animation */
+@keyframes heartClick {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.heart {
+    position: absolute;
+    font-size: 2rem;
+    color: #ff4d4d;
+    animation: heartClick 1s ease-out;
+    pointer-events: none; /* Ensure clicks pass through */
+}
