@@ -7,14 +7,18 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    overflow: hidden; /* Hide overflow to prevent scrolling */
+    position: relative;
 }
 
 .container {
     text-align: center;
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1; /* Ensure the container is above the emojis */
+    position: relative;
 }
 
 h1 {
@@ -51,4 +55,25 @@ button:hover {
     font-size: 1.5rem;
     margin-top: 20px;
     color: #388e3c;
+}
+
+/* Floating love emojis */
+.emoji {
+    position: absolute;
+    font-size: 2rem;
+    animation: float 10s infinite ease-in-out;
+    opacity: 0.7;
+    z-index: 0; /* Ensure emojis are behind the container */
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20vh) translateX(20vw) rotate(180deg);
+    }
+    100% {
+        transform: translateY(0) translateX(0) rotate(360deg);
+    }
 }
