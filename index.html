@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Will You Be My Valentine, Christine?</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Confetti library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 </head>
 <body>
     <!-- Floating love emojis -->
@@ -15,9 +17,13 @@
     <div class="emoji" style="left: 90%; top: 60%;">💌</div>
     <div class="emoji" style="left: 20%; top: 90%;">💑</div>
 
+    <!-- Confetti canvas -->
+    <canvas id="confetti-canvas"></canvas>
+
     <!-- Main content container -->
     <div class="container">
         <h1>Dear Christine,</h1>
+        <p>Roses are red, violets are blue,</p>
         <p>I made this website just for you!</p>
         <p>Will you be my Valentine? 💌</p>
         <div class="buttons">
@@ -31,7 +37,7 @@
         <p id="countdown"></p>
     </div>
 
-    <!-- JavaScript for countdown and responses -->
+    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
