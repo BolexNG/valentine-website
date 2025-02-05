@@ -21,6 +21,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
     z-index: 1; /* Ensure the container is above the emojis */
     position: relative;
+    max-width: 90%; /* Ensure it doesn't overflow on small screens */
 }
 
 /* Heading styling */
