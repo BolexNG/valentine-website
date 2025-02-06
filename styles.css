@@ -24,6 +24,7 @@ body {
     position: relative;
     max-width: 90%; /* Ensure it doesn't overflow on small screens */
     margin: 0 auto; /* Center the container horizontally */
+    width: 100%; /* Ensure it takes full width */
 }
 
 /* Heading styling */
