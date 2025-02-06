@@ -42,6 +42,10 @@ p {
 /* Button container styling */
 .buttons {
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between buttons */
+    flex-wrap: wrap; /* Wrap buttons on small screens */
 }
 
 /* Button styling */
@@ -50,11 +54,12 @@ button {
     color: white; /* White text */
     border: none;
     padding: 10px 20px;
-    margin: 5px;
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s;
+    flex: 1 1 auto; /* Allow buttons to grow and shrink */
+    min-width: 100px; /* Minimum width for buttons */
 }
 
 /* Button hover effect */
